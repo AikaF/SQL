@@ -151,5 +151,26 @@ when number_grade > 90 then "A"
 when number_grade > 80 then "B"
 when number_grade > 70 then "C"
 else "F"
+
 end as letter_grade from student_grades
 group by "letter_grade";
+
+
+SELECT p.name,h.name
+
+FROM persons p
+
+JOIN hobbies h
+
+ON p.id=h.person_id;
+
+
+select p.name,h.name
+
+from persons p
+
+join hobbies h
+
+on p.id=h.person_id
+
+WHERE p.name='Bobby McBobbyFace';
