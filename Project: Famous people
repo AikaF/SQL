@@ -1,0 +1,21 @@
+create table famous_people (id integer primary key, fullname text, birthyear numeric, known_for text);
+insert into famous_people values ("1","Chris Evans","1981","Captain America");
+insert into famous_people values ("2","Robert Downey JR.","1965","Iron Man");
+insert into famous_people values ("3","Jennifer Lawrence","1990","Hunger Games");
+insert into famous_people values ("4","Channing Tatum","1980","Dog");
+insert into famous_people values ("5","George Clooney","1960","Ticket to Paradise");
+insert into famous_people values ("6","Johnny Depp","1963","Pirates  of the Caribbian");
+
+create table relationship_status (id integer primary key, person_id integer, status text, since numeric);
+insert into relationship_status values ("1","1","in a relationship","2021");
+insert into relationship_status values ("2","2","married","2005");
+insert into relationship_status values ("3","3","married","2019");
+insert into relationship_status values ("4","4","in a relationship","2021");
+insert into relationship_status values ("5","5","married","2014");
+insert into relationship_status values ("6","6","single","2023");
+
+
+select famous_people.fullname,relationship_status.status,relationship_status.since
+from famous_people
+join relationship_status
+on famous_people.id=relationship_status.person_id;
