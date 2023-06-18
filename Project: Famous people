@@ -5,6 +5,16 @@ insert into famous_people values ("3","Jennifer Lawrence","1990","Hunger Games")
 insert into famous_people values ("4","Channing Tatum","1980","Dog");
 insert into famous_people values ("5","George Clooney","1960","Ticket to Paradise");
 insert into famous_people values ("6","Johnny Depp","1963","Pirates  of the Caribbian");
+insert into famous_people values ("7","Margot Robbie","1990","Suicide Squad");
+insert into famous_people values ("8","Jared Leto","1971","Morbius");
+insert into famous_people values ("9","Ryan Reynolds","1976","Deadpool");
+insert into famous_people values ("10","Ryan Gosling","1980","La La Land");
+insert into famous_people values ("11","Scarlet Johanson","1984","Black Widow");
+insert into famous_people values ("12","Brad Pitt","1963","Bullet Train");
+insert into famous_people values ("13","Matt Damon","1970","Bourne Supremacy");
+insert into famous_people values ("14","Will Smith","1968","Fresh Prince of Bel-Air");
+insert into famous_people values ("15","Ben Affleck","1972","The Town");
+
 
 create table relationship_status (id integer primary key, person_id integer, status text, since numeric);
 insert into relationship_status values ("1","1","in a relationship","2021");
@@ -13,9 +23,19 @@ insert into relationship_status values ("3","3","married","2019");
 insert into relationship_status values ("4","4","in a relationship","2021");
 insert into relationship_status values ("5","5","married","2014");
 insert into relationship_status values ("6","6","single","2023");
+insert into relationship_status values ("7","7","married","2016");
+insert into relationship_status values ("8","8","single","2023");
+insert into relationship_status values ("9","9","married","2012");
+insert into relationship_status values ("10","10","married","2022");
+insert into relationship_status values ("11","11","married","2019");
+insert into relationship_status values ("12","12","in a relationship","2022");
+insert into relationship_status values ("13","13","married","2005");
+insert into relationship_status values ("14","14","married","1997");
+insert into relationship_status values ("15","15","married","2022");
 
 
 select famous_people.fullname,relationship_status.status,relationship_status.since
 from famous_people
 join relationship_status
 on famous_people.id=relationship_status.person_id;
+
