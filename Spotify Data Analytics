@@ -38,3 +38,28 @@ select artist_name,track_name, popularity
 from BIT_DB.Spotifydata
 order by popularity desc
 limit 10;
+
+# Then, I calculated the average popularity for the artists in the Spotify data table.
+Where every artist with an average popularity of 90 or above is labeled as 'Top Star' with their name, 
+and average popularity next to it by using CTEs.
+with average_popularity_cte as (
+select artist_name, avg(popularity) as average_popularity
+from SpotifyData
+group by artist_name)
+
+select artist_name,
+average_popularity, 'Top Star' as tag
+from average_popularity_cte
+where average_popularity >= 90; 
+
+
+
+
+
+
+
+
+
+
+
+
