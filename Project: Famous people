@@ -1,3 +1,5 @@
+##For this project I created a table called famous_people and relationship_status in order to make connections between the two.
+
 create table famous_people (id integer primary key, fullname text, birthyear numeric, known_for text);
 insert into famous_people values ("1","Chris Evans","1981","Captain America");
 insert into famous_people values ("2","Robert Downey JR.","1965","Iron Man");
