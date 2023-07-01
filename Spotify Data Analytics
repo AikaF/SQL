@@ -51,15 +51,3 @@ select artist_name,
 average_popularity, 'Top Star' as tag
 from average_popularity_cte
 where average_popularity >= 90; 
-
-
-
-
-
-
-
-
-
-
-
-
